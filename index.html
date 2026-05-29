@@ -18,6 +18,30 @@
       color: #fff;
       overflow-x: hidden;
     }
+
+    /* NAVIGACE */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.95);
+      padding: 15px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+      border-bottom: 2px solid var(--red);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--red);
+    }
+
     .hero {
       height: 100vh;
       background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1614332287897-cdc8b4c3d2a3') center/cover;
@@ -53,7 +77,7 @@
       transform: scale(1.08);
       box-shadow: 0 0 55px rgba(255,0,0,0.9);
     }
-    section { padding: 80px 10%; }
+    section { padding: 100px 10% 80px; scroll-margin-top: 80px; }
     .about { background: linear-gradient(135deg, #1a0000, #000); }
     h2 {
       font-size: 3rem;
@@ -87,19 +111,29 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- NAVIGACE -->
+  <nav>
+    <a href="#home">Domů</a>
+    <a href="#onas">O nás</a>
+    <a href="#pripojit">Jak se připojit</a>
+    <a href="#nabidka">Co nabízíme</a>
+    <a href="#pravidla">Pravidla</a>
+    <a href="#staff">Staff</a>
+  </nav>
+
+  <!-- HERO / Domů -->
+  <section id="home" class="hero">
     <div>
       <h1>CRAZYRP</h1>
       <p>Nejšílenější FiveM RP server v Česku</p>
-      <button class="btn" onclick="window.open('https://discord.gg/5P2uXj3P', '_blank')">
+      <button class="btn" onclick="window.open('https://discord.gg/RbAuKUN7', '_blank')">
         <i class="fab fa-discord"></i> PŘIPOJIT SE NA DISCORD
       </button>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
+  <!-- O NÁS -->
+  <section id="onas" class="about">
     <h2>O NÁS</h2>
     <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto;">
       Vítej na <strong>CRAZYRP</strong> — serveru, kde pravidla jsou volná, akce je všude a bláznivý příběhy vznikají každou minutu.<br>
@@ -108,7 +142,7 @@
   </section>
 
   <!-- JAK SE PŘIPOJIT -->
-  <section style="background:#111;">
+  <section id="pripojit" style="background:#111;">
     <h2>JAK SE PŘIPOJIT</h2>
     <div class="card" style="text-align:center; max-width:700px; margin:0 auto;">
       <h3>1. Nainstaluj FiveM</h3>
@@ -116,12 +150,12 @@
       <h3>2. Přidej server</h3>
       <p><strong>IP:</strong> <code>play.crazyrp.cz</code></p><br>
       <h3>3. Připoj se přes Discord</h3>
-      <button class="btn" onclick="window.open('https://discord.gg/5P2uXj3P', '_blank')">Připojit na Discord</button>
+      <button class="btn" onclick="window.open('https://discord.gg/RbAuKUN7', '_blank')">Připojit na Discord</button>
     </div>
   </section>
 
   <!-- CO NABÍZÍME -->
-  <section>
+  <section id="nabidka">
     <h2>CO NABÍZÍME</h2>
     <div class="features">
       <div class="card"><h3>🔥 Volný RP</h3><p>Žádné zbytečné restrikce.</p></div>
@@ -132,7 +166,7 @@
   </section>
 
   <!-- PRAVIDLA -->
-  <section style="background:#1a0000;">
+  <section id="pravidla" style="background:#1a0000;">
     <h2>ZÁKLADNÍ PRAVIDLA</h2>
     <div class="rules">
       <div class="card">1. Respektuj ostatní hráče (No Toxicity)</div>
@@ -146,8 +180,8 @@
     </p>
   </section>
 
-  <!-- STAFF TÝM -->
-  <section>
+  <!-- STAFF -->
+  <section id="staff">
     <h2>STAFF TÝM</h2>
     <div class="staff">
       <div class="card">
