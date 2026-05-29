@@ -5,109 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRAZYRP | FiveM Roleplay</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    :root {
-      --red: #ff0000;
-      --blue: #00aaff;
-      --dark: #0a0a0a;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #0a0a0a;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* NAVIGACE */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(10,10,10,0.95);
-      padding: 15px 10%;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      z-index: 1000;
-      border-bottom: 2px solid var(--red);
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: var(--red);
-    }
-
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1614332287897-cdc8b4c3d2a3') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-    .hero h1 {
-      font-size: 5.5rem;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #ff0000, #00aaff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-    }
-    .btn {
-      padding: 16px 45px;
-      font-size: 1.4rem;
-      background: var(--red);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 0 35px rgba(255,0,0,0.7);
-    }
-    .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 55px rgba(255,0,0,0.9);
-    }
-    section { padding: 100px 10% 80px; scroll-margin-top: 80px; }
-    .about { background: linear-gradient(135deg, #1a0000, #000); }
-    h2 {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 50px;
-      color: var(--red);
-    }
-    .features, .rules, .staff {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: rgba(20,20,20,0.95);
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid #ff000022;
-      transition: 0.3s;
-      text-align: center;
-    }
-    .card:hover {
-      border-color: var(--red);
-      transform: translateY(-10px);
-    }
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -121,7 +19,7 @@
     <a href="#staff">Staff</a>
   </nav>
 
-  <!-- HERO / Domů -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <div>
       <h1>CRAZYRP</h1>
@@ -135,14 +33,12 @@
   <!-- O NÁS -->
   <section id="onas" class="about">
     <h2>O NÁS</h2>
-    <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto;">
-      Vítej na <strong>CRAZYRP</strong> — serveru, kde pravidla jsou volná, akce je všude a bláznivý příběhy vznikají každou minutu.<br>
-      Gangy, businessy, policejní honičky, dark web a mnohem víc.
-    </p>
+    <p>Vítej na <strong>CRAZYRP</strong> — serveru, kde pravidla jsou volná, akce je všude a bláznivý příběhy vznikají každou minutu.<br>
+      Gangy, businessy, policejní honičky, dark web a mnohem víc.</p>
   </section>
 
   <!-- JAK SE PŘIPOJIT -->
-  <section id="pripojit" style="background:#111;">
+  <section id="pripojit">
     <h2>JAK SE PŘIPOJIT</h2>
     <div class="card" style="text-align:center; max-width:700px; margin:0 auto;">
       <h3>1. Nainstaluj FiveM</h3>
@@ -166,7 +62,7 @@
   </section>
 
   <!-- PRAVIDLA -->
-  <section id="pravidla" style="background:#1a0000;">
+  <section id="pravidla">
     <h2>ZÁKLADNÍ PRAVIDLA</h2>
     <div class="rules">
       <div class="card">1. Respektuj ostatní hráče (No Toxicity)</div>
@@ -184,18 +80,9 @@
   <section id="staff">
     <h2>STAFF TÝM</h2>
     <div class="staff">
-      <div class="card">
-        <h3>👑 Owner</h3>
-        <p><strong>Wolfex</strong></p>
-      </div>
-      <div class="card">
-        <h3>🔧 Admini</h3>
-        <p><strong>12 volných pozic</strong></p>
-      </div>
-      <div class="card">
-        <h3>🛡️ Moderátoři</h3>
-        <p><strong>8 volných pozic</strong></p>
-      </div>
+      <div class="card"><h3>👑 Owner</h3><p><strong>Wolfex</strong></p></div>
+      <div class="card"><h3>🔧 Admini</h3><p><strong>12 volných pozic</strong></p></div>
+      <div class="card"><h3>🛡️ Moderátoři</h3><p><strong>8 volných pozic</strong></p></div>
     </div>
   </section>
 
@@ -208,3 +95,107 @@
 
 </body>
 </html>
+
+2. style.css (vytvoř nový soubor)
+CSS:root {
+  --red: #ff0000;
+  --blue: #00aaff;
+  --dark: #0a0a0a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* NAVIGACE */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,10,0.95);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1000;
+  border-bottom: 2px solid var(--red);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+nav a:hover { color: var(--red); }
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1614332287897-cdc8b4c3d2a3') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 5.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff0000, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p { font-size: 1.6rem; margin-bottom: 30px; }
+
+.btn {
+  padding: 16px 45px;
+  font-size: 1.4rem;
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 35px rgba(255,0,0,0.7);
+}
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 55px rgba(255,0,0,0.9);
+}
+
+section { padding: 100px 10% 80px; scroll-margin-top: 80px; }
+.about { background: linear-gradient(135deg, #1a0000, #000); }
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--red);
+}
+
+.features, .rules, .staff {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(20,20,20,0.95);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ff000022;
+  transition: 0.3s;
+  text-align: center;
+}
+.card:hover {
+  border-color: var(--red);
+  transform: translateY(-10px);
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 40px;
+}
