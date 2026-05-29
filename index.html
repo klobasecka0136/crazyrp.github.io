@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAZYRP | FiveM Roleplay</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root {
+      --red: #ff0000;
+      --blue: #00aaff;
+      --dark: #0a0a0a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1614332287897-cdc8b4c3d2a3') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 5.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff0000, #00aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 16px 45px;
+      font-size: 1.4rem;
+      background: var(--red);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 35px rgba(255,0,0,0.7);
+    }
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 55px rgba(255,0,0,0.9);
+    }
+    section { padding: 80px 10%; }
+    .about { background: linear-gradient(135deg, #1a0000, #000); }
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--red);
+    }
+    .features, .rules, .staff {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: rgba(20,20,20,0.95);
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #ff000022;
+      transition: 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      border-color: var(--red);
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>CRAZYRP</h1>
+      <p>Nejšílenější FiveM RP server v Česku</p>
+      <button class="btn" onclick="window.open('https://discord.gg/5P2uXj3P', '_blank')">
+        <i class="fab fa-discord"></i> PŘIPOJIT SE NA DISCORD
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>O NÁS</h2>
+    <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto;">
+      Vítej na <strong>CRAZYRP</strong> — serveru, kde pravidla jsou volná, akce je všude a bláznivý příběhy vznikají každou minutu.<br>
+      Gangy, businessy, policejní honičky, dark web a mnohem víc.
+    </p>
+  </section>
+
+  <!-- JAK SE PŘIPOJIT -->
+  <section style="background:#111;">
+    <h2>JAK SE PŘIPOJIT</h2>
+    <div class="card" style="text-align:center; max-width:700px; margin:0 auto;">
+      <h3>1. Nainstaluj FiveM</h3>
+      <p>Stáhni si FiveM z oficiálních stránek</p><br>
+      <h3>2. Přidej server</h3>
+      <p><strong>IP:</strong> <code>play.crazyrp.cz</code></p><br>
+      <h3>3. Připoj se přes Discord</h3>
+      <button class="btn" onclick="window.open('https://discord.gg/5P2uXj3P', '_blank')">Připojit na Discord</button>
+    </div>
+  </section>
+
+  <!-- CO NABÍZÍME -->
+  <section>
+    <h2>CO NABÍZÍME</h2>
+    <div class="features">
+      <div class="card"><h3>🔥 Volný RP</h3><p>Žádné zbytečné restrikce.</p></div>
+      <div class="card"><h3>🚔 Police & Gangy</h3><p>Komplexní systémy.</p></div>
+      <div class="card"><h3>💰 Economy</h3><p>Realistická ekonomika + darkweb.</p></div>
+      <div class="card"><h3>🎥 Unique Events</h3><p>Pravidelné velké eventy.</p></div>
+    </div>
+  </section>
+
+  <!-- PRAVIDLA -->
+  <section style="background:#1a0000;">
+    <h2>ZÁKLADNÍ PRAVIDLA</h2>
+    <div class="rules">
+      <div class="card">1. Respektuj ostatní hráče (No Toxicity)</div>
+      <div class="card">2. Žádný metagaming, powergaming</div>
+      <div class="card">3. Voice chat musí být zapnutý</div>
+      <div class="card">4. Dodržuj pravidla roleplay</div>
+      <div class="card">5. Žádné cheatování / exploits</div>
+    </div>
+    <p style="text-align:center; margin-top:30px;">
+      <strong>Kompletní pravidla najdeš na Discordu.</strong>
+    </p>
+  </section>
+
+  <!-- STAFF TÝM -->
+  <section>
+    <h2>STAFF TÝM</h2>
+    <div class="staff">
+      <div class="card">
+        <h3>👑 Owner</h3>
+        <p><strong>Wolfex</strong></p>
+      </div>
+      <div class="card">
+        <h3>🔧 Admini</h3>
+        <p><strong>12 volných pozic</strong></p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Moderátoři</h3>
+        <p><strong>8 volných pozic</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>CRAZYRP 2026</strong> • FiveM Roleplay</p>
+    <p>IP: <code>play.crazyrp.cz</code></p>
+    <br>
+    <a href="https://discord.gg/5P2uXj3P" style="color:#ff0000; font-size:1.5rem;">Discord →</a>
+  </footer>
+
+</body>
+</html>
